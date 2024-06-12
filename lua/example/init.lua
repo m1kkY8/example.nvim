@@ -2,6 +2,11 @@ local M = {}
 
 function M.setup(opts)
     opts = opts or {}
+
+    -- Load Keymaps function 
+    M.keymaps()
+
+
 end
 
 -- Keymaps

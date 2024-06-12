@@ -2,15 +2,17 @@ local M = {}
 
 function M.setup(opts)
     opts = opts or {}
+end
 
+-- Keymaps
+function M.keymaps()
     vim.keymap.set("n", "<leader>h", function ()
-        if opts.name then
-            print("Hello, " .. opts.name .. "!")
-        else
-            print("Hello, world!")
-        end
+        print("Hello, world!")
     end)
 
+    vim.keymap.set("n", "<leader>q", function ()
+        vim.cmd("q")
+    end)
 end
 
 return M
